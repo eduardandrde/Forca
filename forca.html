@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button type= "button" onclick="Tracos()">Vamos Jogar Forca</button>
+
+    <h1 id="letras_aparecendo">
+
+    </h1>
+   
+    <h1 id="tracos">
+
+    </h1>
+
+
+
+    <form>
+        <label>Escolha uma letra:</label>
+        <input id="letra_usuario">
+        <button type="button" onclick="Verificar()">Verificar</button>
+    </form>
+    
+</body>
+
+<script>
+    var palavra_aleatoria = "";
+    
+    function Tracos(){
+        const palavras = ["javascript", "programacao", "computador","desenvolvimento"];
+        
+        var indice_aleatorio = Math.floor(Math.random() * palavras.length);
+
+        palavra_aleatoria = palavras[indice_aleatorio];
+
+        var tam_palavra_aleatoria = palavra_aleatoria.length;
+        
+        document.getElementById("tracos").innerHTML= "_ ".repeat(tam_palavra_aleatoria); 
+        
+
+    };
+
+    function Verificar(){
+        letra_usuario = document.getElementById("letra_usuario").value;
+        letras_aparecendo = document.getElementById("letras_aparecendo").innerHTML;
+
+       
+        for(i = 0 ; i < palavra_aleatoria.length; i++){
+            if (letra_palavra === letra_usuario){
+                letras_aparecendo=letras_aparecendo + letra_usuario;
+            }
+            else{
+                letras_aparecendo = letras_aparecendo + '_';
+            }
+        }
+    }
+        
+</script>
+</html>
