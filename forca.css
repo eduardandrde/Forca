@@ -1,0 +1,17 @@
+.traco {
+    display: inline-block;
+    width: 20px; /* Ajuste conforme necessário */
+    height: 2px;  /* Ajuste conforme necessário */
+    background-color: black; /* Cor dos traços */
+    margin-right: 5px;  /* Espaçamento entre os traços */
+}
+
+.alinha_letra_tracos{
+    display: block;
+}
+
+.letra_aparecendo{
+    display: inline-block;
+    margin-right: 5px;
+}
+

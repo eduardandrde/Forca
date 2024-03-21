@@ -1,31 +1,73 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Estilos para os traços */
+        .traco_vertical, .traco_horizontal {
+            width: 2px;
+            height: 100px;
+            background-color: black;
+            position:absolute;
+            display: none; /* Oculta os traços inicialmente */
+        }
+
+        .traco_vertical {
+            top: 50px;
+            left: 50px;
+        }
+
+        .traco_horizontal {
+            top: 50px; /* Ajuste conforme necessário */
+            left: 50px;
+            width: 100px; /* Ajuste conforme necessário */
+            height: 2px; /* Ajuste conforme necessário */
+          
+        }
+        .traco {
+            display: inline-block;
+            width: 20px; /* Ajuste conforme necessário */
+            height: 2px;  /* Ajuste conforme necessário */
+            background-color: black; /* Cor dos traços */
+            margin-right: 5px;  /* Espaçamento entre os traços */
+        }
+
+        .alinha_letra_tracos{
+            display: block;
+        }
+
+        .letra_aparecendo{
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
-
-    <button type= "button" onclick="Tracos()">Vamos Jogar Forca</button>
-
-    <h1 id="letras_aparecendo">
-
-    </h1>
+    <button type="button" onclick="Tracos()">Vamos Jogar Forca</button>
    
-    <h1 id="tracos">
+    <div class="alinha_letra_tracos">
+        <h1 id="letra_aparecendo"></h1>
+       
+        <div id="tracos"></div>
+    </div>
 
-    </h1>
-
-
-
-    <form>
+    <h3 id="letra_errada"></h3>
+    
+    <form><br>
         <label>Escolha uma letra:</label>
         <input id="letra_usuario">
         <button type="button" onclick="Verificar()">Verificar</button>
     </form>
-    
-</body>
+
+    <!-- Adicionando traços vertical e horizontal -->
+    <div class="content1">
+        <div class="traco_vertical" id="traco_vertical"></div>
+        <div class="traco_horizontal" id="traco_horizontal"></div>
+    </div>
 
 <script>
     var palavra_aleatoria = "";
@@ -38,26 +80,46 @@
         palavra_aleatoria = palavras[indice_aleatorio];
 
         var tam_palavra_aleatoria = palavra_aleatoria.length;
-        
-        document.getElementById("tracos").innerHTML= "_ ".repeat(tam_palavra_aleatoria); 
-        
 
-    };
+        var tracosHTML="";
 
-    function Verificar(){
-        letra_usuario = document.getElementById("letra_usuario").value;
-        letras_aparecendo = document.getElementById("letras_aparecendo").innerHTML;
-
-       
-        for(i = 0 ; i < palavra_aleatoria.length; i++){
-            if (letra_palavra === letra_usuario){
-                letras_aparecendo=letras_aparecendo + letra_usuario;
-            }
-            else{
-                letras_aparecendo = letras_aparecendo + '_';
-            }
+        for(var i = 0 ; i < tam_palavra_aleatoria ; i++){
+            tracosHTML = tracosHTML + '<div class="traco"></div>';
         }
-    }
         
+        document.getElementById("tracos").innerHTML= tracosHTML;
+        document.getElementById("letra_errada").innerHTML="Letras Erradas:";
+        letras_erradas = ""; // Limpar letras erradas quando iniciar um novo jogo
+        
+        // Exibir os traços verticais e horizontais quando o botão for clicado
+        document.getElementById("traco_vertical").style.display = "block";
+        document.getElementById("traco_horizontal").style.display = "block";
+
+    }
+
+    /*
+    function Verificar(){
+       var letra_usuario = document.getElementById("letra_usuario").value; //devemos botar .value
+       var letra_aparecendo = "";
+
+       for(i=0 ; i < palavra_aleatoria.length ; i++ ){
+            if (letra_usuario == palavra_aleatoria[i]){
+                letra_aparecendo = letra_aparecendo + letra_usuario;
+                document.getElementById("letra_aparecendo").innerHTML = letra_aparecendo;
+            }
+
+            else{
+                letra_errada = letra_errada + letra_usuario;
+                document.getElementById("letra_errada").innerHTML=letra_errada
+                do;
+            };
+       };
+    };*/
 </script>
+</body>
 </html>
+
+
+
+
+        
