@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" onclick="Tracos()">Vamos Jogar Forca</button>
+    <h1>Vamos jogar forca?</h1>
     <div id="exibirTracos"></div>
     <input id="letra_usuario" placeholder="digite uma letra">
     <button id="btt-chutar" onclick="verificarLetra()">Enviar</button>
@@ -39,7 +38,7 @@
     }
     function atualizarPalavra(){
         document.getElementById("exibirTracos").innerText = tracosPalavra;
-        document.getElementById("letra_usuario").innerText =`${letrasChutadas}`;
+        document.getElementById("letras-chutadas").innerText =letrasChutadas;
     }
     function verificarLetra(){
         const letraEnviada = document.getElementById('letra_usuario');
@@ -53,6 +52,7 @@
         }else{
             tentativas--;
             erros++;
+            letrasChutadas.push(letra)
         }
         letraEnviada.value = '';
         atualizarPalavra();
