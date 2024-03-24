@@ -1,17 +1,51 @@
-.traco {
-    display: inline-block;
-    width: 20px; /* Ajuste conforme necessário */
-    height: 2px;  /* Ajuste conforme necessário */
-    background-color: black; /* Cor dos traços */
-    margin-right: 5px;  /* Espaçamento entre os traços */
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Poppins&display=swap');
+body{
+    background-color: #455426;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#letra_usuario {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    font-size: 20px; 
+    border: 1px solid #455426; 
+    margin-bottom: 10px;
+    width: 200px; 
+    background-color: #7B9644;
+    color:#455426;
+}
+#letra_usuario::placeholder {
+    color:#455426;
+    text-align: center;
+    font-size: 18px;
 }
 
-.alinha_letra_tracos{
-    display: block;
+#exibirTracos{
+    font-size: 50px;
+    color:#E39030;
 }
-
-.letra_aparecendo{
-    display: inline-block;
-    margin-right: 5px;
+h1{
+    font-family: "Ojuju", sans-serif;
+    font-weight: lighter;
+    font-size: 50px;
+    color:#E39030;
 }
-
+h3{
+    font-family: "Ojuju", sans-serif;
+    font-weight: lighter;
+    font-size: 50px;
+    color:#E39030;
+}
+#btt-chutar{
+    background-color: #E39030;
+    border: 1px solid #E39030; 
+    width: 80px;
+    height: 30px;
+}
+#letras-chutadas{
+    font-size: 30px;
+    color:#7B9644;
+}
