@@ -20,6 +20,7 @@
     let letrasChutadas;
     let tentativas;
     let erros;
+    let acertos;
 
     function comecarJogo(){
         palavraSorteada = palavras[Math.floor(Math.random() * palavras.length)];
@@ -53,6 +54,14 @@
             tentativas--;
             erros++;
             letrasChutadas.push(letra)
+        }
+        if(tentativas===0){
+            alert("Você consegue fazer melhor. Tenta mais uma!");
+            comecarJogo();
+            return;
+        }else if(!tracosPalavra.includes('_')){
+            alert("Você ganhou!");
+            comecarJogo();
         }
         letraEnviada.value = '';
         atualizarPalavra();
