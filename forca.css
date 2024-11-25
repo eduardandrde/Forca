@@ -49,3 +49,71 @@ h3{
     font-size: 30px;
     color:#7B9644;
 }
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  
+
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .accessibility-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Garante alinhamento do painel ao botão */
+  }
+  
+  .accessibility-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .accessibility-panel {
+    display: none;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 250px; /* Define um tamanho fixo para o painel */
+  }
+  
+  .accessibility-panel button {
+    margin: 5px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%; /* Deixa os botões ocuparem toda a largura do painel */
+  }
+  
+  .accessibility-panel button:hover {
+    background-color: #ddd;
+  }
+  
+  .accessibility-panel input {
+    margin-top: 10px;
+  }
+  
+  .accessibility-panel label {
+    display: block;
+    margin-top: 10px;
+  }
+  

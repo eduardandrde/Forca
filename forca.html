@@ -7,12 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Jogo da Forca</h1>
-    <div id="exibirTracos"></div>
-    <input id="letra_usuario" placeholder="Digite uma letra">
-    <button id="btt-chutar" onclick="verificarLetra()">Enviar</button>
-    <h3>Letras</h3>
-    <div id="letras-chutadas"></div>
+    <div class="accessibility-menu">
+        <button class="accessibility-toggle">+ Acessibilidade</button>
+        <div class="accessibility-panel">
+          <div class="contrast-options">
+            <button onclick="setContrast('light')">Contraste claro</button>
+            <button onclick="setContrast('dark')">Contraste escuro</button>
+            <button onclick="setContrast('invert')">Contraste invertido</button>
+          </div>
+          <div class="font-options">
+            <button onclick="adjustFontSize(1)">A+</button>
+            <button onclick="adjustFontSize(-1)">A-</button>
+            <button onclick="resetFontSize()">Resetar Fonte</button>
+          </div>
+          <div class="color-options">
+            <label for="color-picker">Texto:</label>
+            <input type="color" id="color-picker" onchange="setTextColor(this.value)">
+          </div>
+        </div>
+      </div>
+      
 </body>
 <script>
     const palavras = ["javascript", "programacao", "computador","desenvolvimento"];
@@ -67,6 +81,41 @@
         letraEnviada.value = '';
         atualizarPalavra();
     }
+    // Abrir e fechar o menu de acessibilidade
+document.querySelector('.accessibility-toggle').addEventListener('click', function () {
+  const panel = document.querySelector('.accessibility-panel');
+  panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+});
+
+// Alterar contraste
+function setContrast(mode) {
+  if (mode === 'light') {
+    document.body.style.filter = 'none';
+  } else if (mode === 'dark') {
+    document.body.style.filter = 'brightness(50%)';
+  } else if (mode === 'invert') {
+    document.body.style.filter = 'invert(1)';
+  }
+}
+
+// Ajustar tamanho da fonte
+let fontSize = 16;
+function adjustFontSize(change) {
+  fontSize += change;
+  document.body.style.fontSize = fontSize + 'px';
+}
+
+function resetFontSize() {
+  fontSize = 16;
+  document.body.style.fontSize = fontSize + 'px';
+}
+
+// Alterar cor do texto
+function setTextColor(color) {
+  document.body.style.color = color;
+}
+
     window.load = comecarJogo();
-</script>   
+</script>  
+
 </html>
