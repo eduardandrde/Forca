@@ -1,46 +1,19 @@
  // Abrir e fechar o menu de acessibilidade
- document.querySelector('.accessibility-toggle').addEventListener('click', function () {
-    const panel = document.querySelector('.accessibility-panel');
+ document.querySelector('.botao-acessibilidade').addEventListener('click', function () {
+    const panel = document.querySelector('.painel-acessibilidade');
     panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
   });
   
-  // Alterar contraste
-  function setContrast(mode) {
-    if (mode === 'light') {
-      document.body.style.filter = 'none';
-    } else if (mode === 'dark') {
-      document.body.style.filter = 'brightness(50%)';
-    } else if (mode === 'invert') {
-      document.body.style.filter = 'invert(1)';
-    }
-  }
-  
-  // Ajustar tamanho da fonte
-  let fontSize = 16;
-  function adjustFontSize(change) {
-    fontSize += change;
-    document.body.style.fontSize = fontSize + 'px';
-  }
-  
-  function resetFontSize() {
-    fontSize = 16;
-    document.body.style.fontSize = fontSize + 'px';
-  }
-  
-  // Alterar cor do texto
-  function setTextColor(color) {
-    document.body.style.color = color;
-  }
-  function toggleDyslexicFont() {
+  function DislexiaFont() {
     const body = document.body;
-    if (body.classList.contains('dyslexic-font')) {
-      body.classList.remove('dyslexic-font'); // Remove a fonte se já estiver aplicada
+    if (body.classList.contains('dislexia-font')) {
+      body.classList.remove('dislexia-font'); // Remove a fonte se já estiver aplicada
     } else {
-      body.classList.add('dyslexic-font'); // Aplica a fonte dislexa
+      body.classList.add('dislexia-font'); // Aplica a fonte dislexa
     }
   }
   function destacarTitulos() {
-              // Seleciona todos os títulos (h1, h2, h3, h4, h5, h6)
+              // Seleciona todos os títulos 
               const todosTitulos = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
   
               // Verifica se os títulos já estão destacados
@@ -57,22 +30,22 @@
                   });
               }
           }
-  function highlightLinks() {
+  function destacarLinks() {
           // Seleciona todos os links <a> na página
-          const allLinks = document.querySelectorAll('a');
+          const todosLinks = document.querySelectorAll('a');
   
-          // Verifica se algum link já tem a classe 'highlighted-links'
-          const isHighlighted = allLinks[0].classList.contains('highlighted-links');
+          // Verifica se algum link já tem a classe 'destaque-links'
+          const umLink = todosLinks[0].classList.contains('destaque-links');
   
           // Se os links já estão destacados, remove o destaque
-          if (isHighlighted) {
-              allLinks.forEach(link => {
-                  link.classList.remove('highlighted-links');
+          if (umLink) {
+              todosLinks.forEach(link => {
+                  link.classList.remove('destaque-links');
               });
           } else {
               // Se os links não estão destacados, adiciona o destaque
-              allLinks.forEach(link => {
-                  link.classList.add('highlighted-links');
+              todosLinks.forEach(link => {
+                  link.classList.add('destaque-links');
               });
           }
       }

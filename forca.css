@@ -63,8 +63,13 @@ body {
     margin: 0;
     padding: 0;
   }
+
+
+
+
+
   
-  .accessibility-menu {
+  .menu-acessibilidade {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -72,9 +77,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end; /* Garante alinhamento do painel ao botão */
+
   }
   
-  .accessibility-toggle {
+  .botao-acessibilidade {
     background-color: #007bff;
     color: white;
     border: none;
@@ -84,10 +90,10 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
   
-  .accessibility-panel {
+  .painel-acessibilidade {
     display: none;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
+    background-color: green;
+    
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
@@ -95,41 +101,43 @@ body {
     width: 250px; /* Define um tamanho fixo para o painel */
   }
   
-  .accessibility-panel button {
+  .painel-acessibilidade button {
     margin: 5px 0;
-    padding: 8px;
+    padding: 20px;
     border: none;
-    border-radius: 3px;
+    background-color: greenyellow;
     cursor: pointer;
     width: 100%; /* Deixa os botões ocuparem toda a largura do painel */
   }
   
-  .accessibility-panel button:hover {
+  .painel-acessibilidade button:hover {
     background-color: #ddd;
   }
   
-  .accessibility-panel input {
+  .painel-acessibilidade input {
     margin-top: 10px;
   }
   
-  .accessibility-panel label {
+  .painel-acessibilidade label {
     display: block;
     margin-top: 10px;
   }
 
-  .dyslexic-font *{
+/* CSS para mudança a partir do JS */
+
+  .dislexia-font *{
     font-family: 'Dislexia', serif !important;
   }
 
 
 
-  .highlighted-links  {
-    color: yellow !important; /* Cor amarela para os links */
-    text-decoration: underline !important; /* Sublinhado amarelo */
-    background-color: black !important; /* Caixa preta */
+  .destaque-links  {
+    color: yellow !important; 
+    text-decoration: underline !important; 
+    background-color: black !important; 
 }
-        /* Estilo para os títulos destacados */
-        .titulo-destaque {
+/* Estilo para os títulos destacados */
+         .titulo-destaque {
             color: yellow;
             background-color: black;
             text-decoration: underline !important;

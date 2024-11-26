@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="forca.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdn.rybena.com.br/dom/font/Dislexia/Dislexia.css">
 
     <title>Document</title>
@@ -12,23 +13,13 @@
     <a href="google.com">alo</a>
     <h1>acessibilidade para todos</h1>
     <p>Quando estiver fazendo sua compra,<a href="google.com.br">aoooo</a> você pode solicitar a assistência no embarque e no desembarque selecionando o serviço na área "Atendimento Especial". Esta opção fica logo após os campos que você deve preencher com os dados pessoais. Feito isso, fique tranquilo: a equipe Azul estará pronta para auxiliá-lo sempre que necessário.</p>
-    <div class="accessibility-menu">
-        <button class="accessibility-toggle">+ Acessibilidade</button>
-        <div class="accessibility-panel">
-          <div class="contrast-options">
-            <button onclick="highlightLinks()">Contraste claro</button>
-            <button onclick="destacarTitulos()">Contraste escuro</button>
-            <button onclick="setContrast('invert')">Contraste invertido</button>
-
-          </div>
-          <div class="font-options">
-            <button onclick="adjustFontSize(1)">A+</button>
-            <button onclick="adjustFontSize(-1)">A-</button>
-            <button onclick="toggleDyslexicFont()">Resetar Fonte</button>
-          </div>
-          <div class="color-options">
-            <label for="color-picker">Texto:</label>
-            <input type="color" id="color-picker" onchange="setTextColor(this.value)">
+    <div class="menu-acessibilidade">
+        <button class="botao-acessibilidade">+ Acessibilidade</button>
+        <div class="painel-acessibilidade">
+          <div class="opcoes">
+            <button onclick="destacarLinks()">Links (Destaque)</button>
+            <button onclick="destacarTitulos()"><i class="fas fa-font">Títulos (Destaque)</i></button>
+            <button onclick="DislexiaFont()">Dislexia</button>
           </div>
         </div>
       </div>
