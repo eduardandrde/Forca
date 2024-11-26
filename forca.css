@@ -116,4 +116,8 @@ body {
     display: block;
     margin-top: 10px;
   }
+
+  .dyslexic-font *{
+    font-family: 'Dislexia', serif !important;
+  }
   
