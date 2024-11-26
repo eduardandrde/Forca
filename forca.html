@@ -9,15 +9,17 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="google.com">alo</a>
     <h1>acessibilidade para todos</h1>
-    <p>Quando estiver fazendo sua compra, você pode solicitar a assistência no embarque e no desembarque selecionando o serviço na área "Atendimento Especial". Esta opção fica logo após os campos que você deve preencher com os dados pessoais. Feito isso, fique tranquilo: a equipe Azul estará pronta para auxiliá-lo sempre que necessário.</p>
+    <p>Quando estiver fazendo sua compra,<a href="google.com.br">aoooo</a> você pode solicitar a assistência no embarque e no desembarque selecionando o serviço na área "Atendimento Especial". Esta opção fica logo após os campos que você deve preencher com os dados pessoais. Feito isso, fique tranquilo: a equipe Azul estará pronta para auxiliá-lo sempre que necessário.</p>
     <div class="accessibility-menu">
         <button class="accessibility-toggle">+ Acessibilidade</button>
         <div class="accessibility-panel">
           <div class="contrast-options">
-            <button onclick="setContrast('light')">Contraste claro</button>
+            <button onclick="highlightLinks()">Contraste claro</button>
             <button onclick="setContrast('dark')">Contraste escuro</button>
             <button onclick="setContrast('invert')">Contraste invertido</button>
+
           </div>
           <div class="font-options">
             <button onclick="adjustFontSize(1)">A+</button>
@@ -126,8 +128,25 @@ function toggleDyslexicFont() {
     body.classList.add('dyslexic-font'); // Aplica a fonte dislexa
   }
 }
+function highlightLinks() {
+        // Seleciona todos os links <a> na página
+        const allLinks = document.querySelectorAll('a');
 
+        // Verifica se algum link já tem a classe 'highlighted-links'
+        const isHighlighted = allLinks[0].classList.contains('highlighted-links');
 
+        // Se os links já estão destacados, remove o destaque
+        if (isHighlighted) {
+            allLinks.forEach(link => {
+                link.classList.remove('highlighted-links');
+            });
+        } else {
+            // Se os links não estão destacados, adiciona o destaque
+            allLinks.forEach(link => {
+                link.classList.add('highlighted-links');
+            });
+        }
+    }
     window.load = comecarJogo();
 </script>  
 

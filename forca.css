@@ -120,4 +120,12 @@ body {
   .dyslexic-font *{
     font-family: 'Dislexia', serif !important;
   }
+
+
+
+  .highlighted-links  {
+    color: yellow !important; /* Cor amarela para os links */
+    text-decoration: underline !important; /* Sublinhado amarelo */
+    background-color: black !important; /* Caixa preta */
+}
   
