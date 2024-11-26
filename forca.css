@@ -128,4 +128,9 @@ body {
     text-decoration: underline !important; /* Sublinhado amarelo */
     background-color: black !important; /* Caixa preta */
 }
-  
+        /* Estilo para os títulos destacados */
+        .titulo-destaque {
+            color: yellow;
+            background-color: black;
+            text-decoration: underline !important;
+        }
