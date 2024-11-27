@@ -145,6 +145,17 @@ body {
 
 
 
+     
+
+
+
+
+
+
+
+
+
+
         .perguntas-frequentes {
           max-width: 700px;
           margin-top: 2rem;
@@ -161,11 +172,11 @@ body {
         
         .pergunta h3 {
           font-size: 10px;
-          margin: 0; /* Remove default margin */
+          margin: 0;
         }
         
         .pergunta i {
-          font-size: 18px; /* Adjust the icon size */
+          font-size: 18px;
         }
         
         .resposta {
@@ -180,30 +191,21 @@ body {
           font-size: 1.4rem;
         }
         
-        .ativar-resposta {
-          max-height: 300px;
+        .resposta.mostrar {
+          max-height: 300px; /* Esse valor pode ser ajustado conforme necessário */
         }
-
         
-        .resposta {
-          display: none;
-      }
-      
-      .resposta.mostrar {
-          display: block;
-      }
-      
-      /* Estilos do ícone de "+" e "-" */
-      .pergunta i {
+        /* Estilos do ícone de "+" e "-" */
+        .pergunta i {
           margin-left: 10px;
           cursor: pointer;
-      }
-      
-      .pergunta i.fa-circle-plus {
+        }
+        
+        .pergunta i.fa-circle-plus {
           color: green;
-      }
-      
-      .pergunta i.fa-circle-minus {
+        }
+        
+        .pergunta i.fa-circle-minus {
           color: red;
-      }
-      
+        }
+        

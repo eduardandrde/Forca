@@ -53,21 +53,21 @@
 
       const perguntasF = document.querySelectorAll(".perguntas-frequentes");
 
-perguntasF.forEach(perguntaFrequente => {
-    const pergunta = perguntaFrequente.querySelector(".pergunta");
-    const resposta = perguntaFrequente.querySelector(".resposta");
-    const icone = perguntaFrequente.querySelector("i");
-
-    // Adicionar o evento de clique na pergunta
-    pergunta.addEventListener('click', () => {
-        // Alternar a visibilidade da resposta
-        resposta.classList.toggle("mostrar");
-
-        // Alternar o ícone (de "+" para "-")
-        icone.classList.toggle("fa-circle-plus");
-        icone.classList.toggle("fa-circle-minus");
-    });
-});
+      perguntasF.forEach((perguntaFrequente) => {
+          const pergunta = perguntaFrequente.querySelector(".pergunta");
+          const icone = pergunta.querySelector("i");
+          const resposta = perguntaFrequente.querySelector(".resposta");
+      
+          pergunta.addEventListener("click", () => {
+              // Alterna a classe 'ativar-resposta' para mostrar ou esconder a resposta
+              resposta.classList.toggle("mostrar");
+      
+              // Alterna o ícone entre "+" e "-"
+              icone.classList.toggle("fa-circle-plus");
+              icone.classList.toggle("fa-circle-minus");
+          });
+      });
+      
 
 
       
