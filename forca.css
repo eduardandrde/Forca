@@ -142,3 +142,45 @@ body {
             background-color: black;
             text-decoration: underline !important;
         }
+
+
+
+        .perguntas-frequentes {
+          max-width: 700px;
+          margin-top: 2rem;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid white;
+          cursor: pointer;
+        }
+        
+        .pergunta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .pergunta h3 {
+          font-size: 10px;
+          margin: 0; /* Remove default margin */
+        }
+        
+        .pergunta i {
+          font-size: 18px; /* Adjust the icon size */
+        }
+        
+        .resposta {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 1.4s ease;
+        }
+        
+        .resposta p {
+          padding-top: 1rem;
+          line-height: 1.6;
+          font-size: 1.4rem;
+        }
+        
+        .ativar-resposta {
+          max-height: 300px;
+        }
+        
