@@ -183,4 +183,27 @@ body {
         .ativar-resposta {
           max-height: 300px;
         }
+
         
+        .resposta {
+          display: none;
+      }
+      
+      .resposta.mostrar {
+          display: block;
+      }
+      
+      /* Estilos do ícone de "+" e "-" */
+      .pergunta i {
+          margin-left: 10px;
+          cursor: pointer;
+      }
+      
+      .pergunta i.fa-circle-plus {
+          color: green;
+      }
+      
+      .pergunta i.fa-circle-minus {
+          color: red;
+      }
+      
