@@ -155,57 +155,56 @@ body {
 
 
 
-
+        
         .perguntas-frequentes {
           max-width: 700px;
           margin-top: 2rem;
           padding-bottom: 1rem;
           border-bottom: 2px solid white;
-          cursor: pointer;
-        }
-        
-        .pergunta {
+      }
+      
+      .pergunta {
           display: flex;
           justify-content: space-between;
           align-items: center;
-        }
-        
-        .pergunta h3 {
-          font-size: 10px;
+          cursor: pointer;
+      }
+      
+      .pergunta h3 {
+          font-size: 16px;
           margin: 0;
-        }
-        
-        .pergunta i {
+      }
+      
+      .pergunta i {
           font-size: 18px;
-        }
-        
-        .resposta {
+          cursor: pointer;
+      }
+      
+      .resposta {
           max-height: 0;
           overflow: hidden;
-          transition: max-height 1.4s ease;
-        }
-        
-        .resposta p {
+          transition: max-height 0.4s ease-in-out;
+      }
+      
+      .resposta p {
           padding-top: 1rem;
           line-height: 1.6;
           font-size: 1.4rem;
-        }
-        
-        .resposta.mostrar {
-          max-height: 300px; /* Esse valor pode ser ajustado conforme necessário */
-        }
-        
-        /* Estilos do ícone de "+" e "-" */
-        .pergunta i {
+      }
+      
+      .resposta.mostrar {
+          max-height: 500px; /* Ajuste conforme necessário */
+      }
+      
+      .pergunta i {
           margin-left: 10px;
-          cursor: pointer;
-        }
-        
-        .pergunta i.fa-circle-plus {
+      }
+      
+      .pergunta i.fa-circle-plus {
           color: green;
-        }
-        
-        .pergunta i.fa-circle-minus {
+      }
+      
+      .pergunta i.fa-circle-minus {
           color: red;
-        }
-        
+      }
+      

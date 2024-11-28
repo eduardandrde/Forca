@@ -1,73 +1,35 @@
- // Abrir e fechar o menu de acessibilidade
- document.querySelector('.botao-acessibilidade').addEventListener('click', function () {
-    const panel = document.querySelector('.painel-acessibilidade');
-    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-  });
-  
-  function DislexiaFont() {
-    const body = document.body;
-    if (body.classList.contains('dislexia-font')) {
-      body.classList.remove('dislexia-font'); // Remove a fonte se já estiver aplicada
-    } else {
-      body.classList.add('dislexia-font'); // Aplica a fonte dislexa
-    }
-  }
-  function destacarTitulos() {
-              // Seleciona todos os títulos 
-              const todosTitulos = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  
-              // Verifica se os títulos já estão destacados
-              const jaDestacados = todosTitulos[0]?.classList.contains('titulo-destaque');
-  
-              // Adiciona ou remove o destaque
-              if (jaDestacados) {
-                  todosTitulos.forEach(titulo => {
-                      titulo.classList.remove('titulo-destaque');
-                  });
-              } else {
-                  todosTitulos.forEach(titulo => {
-                      titulo.classList.add('titulo-destaque');
-                  });
-              }
-          }
-  function destacarLinks() {
-          // Seleciona todos os links <a> na página
-          const todosLinks = document.querySelectorAll('a');
-  
-          // Verifica se algum link já tem a classe 'destaque-links'
-          const umLink = todosLinks[0].classList.contains('destaque-links');
-  
-          // Se os links já estão destacados, remove o destaque
-          if (umLink) {
-              todosLinks.forEach(link => {
-                  link.classList.remove('destaque-links');
-              });
-          } else {
-              // Se os links não estão destacados, adiciona o destaque
-              todosLinks.forEach(link => {
-                  link.classList.add('destaque-links');
-              });
-          }
-      }
+const perguntasF = document.querySelectorAll(".perguntas-frequentes");
+
+perguntasF.forEach((perguntaFrequente) => {
+    const pergunta = perguntaFrequente.querySelector(".pergunta");
+    const icone = pergunta.querySelector("i");
+    const resposta = perguntaFrequente.querySelector(".resposta");
+
+    pergunta.addEventListener("click", () => {
+        // Fechar todas as outras respostas
+        perguntasF.forEach((outroPerguntaFrequente) => {
+            const outraResposta = outroPerguntaFrequente.querySelector(".resposta");
+            const outroIcone = outroPerguntaFrequente.querySelector("i");
+
+            // Fechar as respostas e mostrar ícones de "+" em outras perguntas
+            if (outroPerguntaFrequente !== perguntaFrequente) {
+                outraResposta.classList.remove("mostrar");
+                outroIcone.classList.add("fa-circle-plus");
+                outroIcone.classList.remove("fa-circle-minus");
+            }
+        });
+
+        // Alternar a visibilidade da resposta clicada
+        resposta.classList.toggle("mostrar");
+
+        // Alternar o ícone entre "+" e "-"
+        icone.classList.toggle("fa-circle-plus");
+        icone.classList.toggle("fa-circle-minus");
+    });
+});
 
 
-      const perguntasF = document.querySelectorAll(".perguntas-frequentes");
 
-      perguntasF.forEach((perguntaFrequente) => {
-          const pergunta = perguntaFrequente.querySelector(".pergunta");
-          const icone = pergunta.querySelector("i");
-          const resposta = perguntaFrequente.querySelector(".resposta");
-      
-          pergunta.addEventListener("click", () => {
-              // Alterna a classe 'ativar-resposta' para mostrar ou esconder a resposta
-              resposta.classList.toggle("mostrar");
-      
-              // Alterna o ícone entre "+" e "-"
-              icone.classList.toggle("fa-circle-plus");
-              icone.classList.toggle("fa-circle-minus");
-          });
-      });
-      
 
 
       
