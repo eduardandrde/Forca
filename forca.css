@@ -1,210 +1,247 @@
-@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Poppins&display=swap');
-body{
-    background-color: #455426;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#letra_usuario {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 50px;
-    font-size: 20px; 
-    border: 1px solid #455426; 
-    margin-bottom: 10px;
-    width: 200px; 
-    background-color: #7B9644;
-    color:#455426;
-}
-#letra_usuario::placeholder {
-    color:#455426;
-    text-align: center;
-    font-size: 18px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-#exibirTracos{
-    font-size: 50px;
-    color:#E39030;
-}
-h1{
-    font-family: "Ojuju", sans-serif;
-    font-weight: lighter;
-    font-size: 50px;
-    color:#E39030;
-}
-h3{
-    font-family: "Ojuju", sans-serif;
-    font-weight: lighter;
-    font-size: 50px;
-    color:#E39030;
-}
-#btt-chutar{
-    background-color: #E39030;
-    border: 1px solid #E39030; 
-    width: 80px;
-    height: 30px;
-}
-#letras-chutadas{
-    font-size: 30px;
-    color:#7B9644;
-}
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  
-
-
-
-
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-
-
-
-
-  
-  .menu-acessibilidade {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Garante alinhamento do painel ao botão */
-
-  }
-  
-  .botao-acessibilidade {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .painel-acessibilidade {
-    display: none;
-    background-color: green;
-    
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 250px; /* Define um tamanho fixo para o painel */
-  }
-  
-  .painel-acessibilidade button {
-    margin: 5px 0;
-    padding: 20px;
-    border: none;
-    background-color: greenyellow;
-    cursor: pointer;
-    width: 100%; /* Deixa os botões ocuparem toda a largura do painel */
-  }
-  
-  .painel-acessibilidade button:hover {
-    background-color: #ddd;
-  }
-  
-  .painel-acessibilidade input {
-    margin-top: 10px;
-  }
-  
-  .painel-acessibilidade label {
-    display: block;
-    margin-top: 10px;
-  }
-
-/* CSS para mudança a partir do JS */
-
-  .dislexia-font *{
-    font-family: 'Dislexia', serif !important;
-  }
-
-
-
-  .destaque-links  {
-    color: yellow !important; 
-    text-decoration: underline !important; 
-    background-color: black !important; 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0c0ce94d;
 }
-/* Estilo para os títulos destacados */
-         .titulo-destaque {
-            color: yellow;
-            background-color: black;
-            text-decoration: underline !important;
-        }
+
+.container {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fde3a7d7;
+  padding: 1rem;
+}
+
+.form-image img {
+  width: 31rem;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 3rem;
+  margin: auto; /* Centraliza o conteúdo da .form */
+}
+
+.form-header {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Garante que o título e o botão estejam centralizados */
+  padding: 0 1rem; /* Adiciona margem lateral */
+}
+
+.form-header h1 {
+  margin-bottom: 1rem; /* Adiciona uma margem abaixo do título */
+  text-align: center;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+}
+
+.login-button button {
+  border: none;
+  background-color: #6c63ff;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-button button:hover {
+  background-color: #6b63fff1;
+}
+
+.login-button button a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+.form-header h1::after {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: #6c63ff;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 100%; /* Garante que o input group ocupe a largura total */
+  gap: 1rem; /* Adiciona espaçamento entre os inputs */
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Faz com que a largura do input-box seja 100% */
+  padding: 0 1rem; /* Adiciona padding lateral */
+}
+
+.input-box input {
+  width: 100%; /* Garante que o input ocupe a largura do input-box */
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 0px; /* Deixa os inputs quadrados */
+  box-shadow: 1px 1px 6px #0000001c;
+  font-size: 0.8rem;
+  box-sizing: border-box; /* Inclui padding e borda na largura do input */
+}
+
+.input-box input:hover {
+  background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+  outline: 1px solid #6c63ff;
+}
+
+.input-box label,
+.gender-title h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+
+.input-box input::placeholder {
+  color: #000000be;
+}
+
+.gender-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.62rem;
+  padding: 0 .5rem;
+}
+
+.gender-input {
+  display: flex;
+  align-items: center;
+}
+
+.gender-input input {
+  margin-right: 0.35rem;
+}
+
+.gender-input label {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+.continue-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ocupa toda a largura disponível */
+ 
+}
+
+.continue-button input {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #28a745;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  width: 70%;
+}
+
+.continue-button button:hover {
+  background-color: #218838;
+}
+
+.continue-button button a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+@media screen and (max-width: 1330px) {
+  .form-image {
+      display: none;
+  }
+  .container {
+      width: 50%;
+  }
+  .form {
+      width: 100%;
+  }
+}
 
 
 
-     
-
-
-
-
-
-
-
-
-
-        
-        .perguntas-frequentes {
-          max-width: 700px;
-          margin-top: 2rem;
-          padding-bottom: 1rem;
-          border-bottom: 2px solid white;
-      }
-      
-      .pergunta {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          cursor: pointer;
-      }
-      
-      .pergunta h3 {
-          font-size: 16px;
-          margin: 0;
-      }
-      
-      .pergunta i {
-          font-size: 18px;
-          cursor: pointer;
-      }
-      
-      .resposta {
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.4s ease-in-out;
-      }
-      
-      .resposta p {
-          padding-top: 1rem;
-          line-height: 1.6;
-          font-size: 1.4rem;
-      }
-      
-      .resposta.mostrar {
-          max-height: 500px; /* Ajuste conforme necessário */
-      }
-      
-      .pergunta i {
-          margin-left: 10px;
-      }
-      
-      .pergunta i.fa-circle-plus {
-          color: green;
-      }
-      
-      .pergunta i.fa-circle-minus {
-          color: red;
-      }
-      
+@media screen and (max-width: 1330px) {
+  .form-image {
+      display: none;
+  }
+  .container {
+      width: 50%;
+  }
+  .form {
+      width: 100%;
+  }
+}
+@media screen and (max-width: 1064px) {
+  .container {
+      width: 90%;
+      height: auto;
+  }
+  .input-group {
+      flex-direction: column;
+      z-index: 5;
+      padding-right: 5rem;
+      max-height: 10rem;
+      overflow-y: scroll;
+      flex-wrap: nowrap;
+  }
+  .gender-inputs {
+      margin-top: 2rem;
+  }
+  .gender-group {
+      flex-direction: column;
+  }
+  .gender-title h6 {
+      margin: 0;
+  }
+  .gender-input {
+      margin-top: 0.5rem;
+  }
+}
