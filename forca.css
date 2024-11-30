@@ -1,231 +1,76 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
 }
 
-body {
-  width: 100%;
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.container {
-  width: 80%;
-  height: 90vh;
-  display: flex;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-  background-color: #218838;
+.modal-container.aparecer {
+  opacity: 1;
+  pointer-events: all;
 }
 
-.form-image {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  padding: 1rem;
-}
-
-.form-image img {
-  width: 31rem;
-}
-
-.form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  padding: 3rem;
-  margin: auto; /* Centraliza o conteúdo da .form */
-}
-
-.form-header {
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%; /* Garante que o título e o botão estejam centralizados */
-  padding: 0 1rem; /* Adiciona margem lateral */
-}
-
-.form-header h1 {
-  padding-top: 20px;
-  margin-bottom: 10px; /* Adiciona uma margem abaixo do título */
-  text-align: center;
-}
-
-.login-button {
-  display: flex;
-  align-items: center;
-}
-
-.login-button button {
-  border: none;
-  background-color: #6c63ff;
-  padding: 0.4rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  color: #fff;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.login-button button:hover {
-  background-color: #6b63fff1;
-}
-
-.login-button button a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #fff;
-}
-
-.form-header h1::after {
-  content: '';
-  display: block;
-  width: 5rem;
-  height: 0.3rem;
-  background-color: #6c63ff;
-  margin: 0 auto;
-  position: absolute;
+.modal {
+  background: linear-gradient(135deg, #4a90e2, #56c8d2); /* Gradiente de fundo */
+  color: white;
+  width: 500px;
+  max-width: 90%;
+  padding: 20px 30px;
   border-radius: 10px;
-}
-
-.input-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  width: 100%; /* Garante que o input group ocupe a largura total */
-  gap: 1rem; /* Adiciona espaçamento entre os inputs */
-}
-
-.input-box {
-  display: flex;
-  flex-direction: column;
-  width: 90%; /* Faz com que a largura do input-box seja 100% */
-  padding: 0 1rem; /* Adiciona padding lateral */
-}
-
-.input-box input {
-  width: 100%; /* Garante que o input ocupe a largura do input-box */
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 0px; /* Deixa os inputs quadrados */
-  box-shadow: 1px 1px 6px #0000001c;
-  font-size: 0.8rem;
-  box-sizing: border-box; /* Inclui padding e borda na largura do input */
-  height: 45px;
-}
-.input-box label{
-  margin-bottom: 5px;
-}
-
-.input-box input:hover {
-  background-color: #eeeeee75;
-}
-
-
-
-.input-box label,
-.gender-title h6 {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #000000c0;
-}
-
-.input-box input::placeholder {
-  color: #000000be;
-}
-
-.continue-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; 
- 
-}
-
-.continue-button input {
-  padding: 10px;
-  border: none;
-  background-color: #28a745;
-  margin-top: 10px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  transition: background-color 0.3s ease;
-  width: 40%;
+  position: relative; /* Necessário para posicionar o botão de fechar */
 }
 
-.continue-button button:hover {
-  background-color: #218838;
+.modal h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.continue-button button{
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 20;
-  color: #fff;
+.modal h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: white;
+  margin: 10px auto 0; /* Linha abaixo do título */
 }
 
-@media screen and (max-width: 1330px) {
-  .form-image {
-      display: none;
-  }
-  .container {
-      width: 50%;
-  }
-  .form {
-      width: 100%;
-  }
+.modal p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.button-fechar {
+  position: absolute;
+  top: 15px; /* Distância do topo */
+  right: 10px; /* Distância da lateral direita */
+  padding: 5px 10px; /* Espaçamento ao redor do texto */
+  border: 2px solid white; /* Borda para o círculo */
+  border-radius: 100%; /* Deixa o botão redondo */
+  background: none; /* Remove a cor de fundo */
+  color: white; /* Cor do texto */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Suaviza a animação ao passar o mouse */
+}
+
+.button-fechar:hover {
+  color: #4a90e2; /* Cor do texto ao passar o mouse */
+  border-color: #4a90e2; /* Cor da borda ao passar o mouse */
 }
 
 
-
-@media screen and (max-width: 1330px) {
-  .form-image {
-      display: none;
-  }
-  .container {
-      width: 50%;
-  }
-  .form {
-      width: 100%;
-  }
-}
-@media screen and (max-width: 1064px) {
-  .container {
-      width: 90%;
-      height: auto;
-  }
-  .input-group {
-      flex-direction: column;
-      z-index: 5;
-      padding-right: 5rem;
-      max-height: 10rem;
-      overflow-y: scroll;
-      flex-wrap: nowrap;
-  }
-  .gender-inputs {
-      margin-top: 2rem;
-  }
-  .gender-group {
-      flex-direction: column;
-  }
-  .gender-title h6 {
-      margin: 0;
-  }
-  .gender-input {
-      margin-top: 0.5rem;
-  }
-}
