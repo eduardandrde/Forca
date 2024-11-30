@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0c0ce94d;
+  background-color: white;
 }
 
 .container {
@@ -19,6 +19,7 @@ body {
   height: 80vh;
   display: flex;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+  background-color: #218838;
 }
 
 .form-image {
@@ -26,7 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fde3a7d7;
+  background-color: white;
   padding: 1rem;
 }
 
@@ -46,7 +47,7 @@ body {
 }
 
 .form-header {
-  margin-bottom: 3rem;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   width: 100%; /* Garante que o título e o botão estejam centralizados */
@@ -54,7 +55,8 @@ body {
 }
 
 .form-header h1 {
-  margin-bottom: 1rem; /* Adiciona uma margem abaixo do título */
+  padding-top: 20px;
+  margin-bottom: 10px; /* Adiciona uma margem abaixo do título */
   text-align: center;
 }
 
@@ -99,8 +101,9 @@ body {
 .input-group {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
   width: 100%; /* Garante que o input group ocupe a largura total */
   gap: 1rem; /* Adiciona espaçamento entre os inputs */
 }
@@ -108,7 +111,7 @@ body {
 .input-box {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Faz com que a largura do input-box seja 100% */
+  width: 90%; /* Faz com que a largura do input-box seja 100% */
   padding: 0 1rem; /* Adiciona padding lateral */
 }
 
@@ -120,15 +123,17 @@ body {
   box-shadow: 1px 1px 6px #0000001c;
   font-size: 0.8rem;
   box-sizing: border-box; /* Inclui padding e borda na largura do input */
+  height: 45px;
+}
+.input-box label{
+  margin-bottom: 5px;
 }
 
 .input-box input:hover {
   background-color: #eeeeee75;
 }
 
-.input-box input:focus-visible {
-  outline: 1px solid #6c63ff;
-}
+
 
 .input-box label,
 .gender-title h6 {
@@ -141,56 +146,35 @@ body {
   color: #000000be;
 }
 
-.gender-group {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.62rem;
-  padding: 0 .5rem;
-}
-
-.gender-input {
-  display: flex;
-  align-items: center;
-}
-
-.gender-input input {
-  margin-right: 0.35rem;
-}
-
-.gender-input label {
-  font-size: 0.81rem;
-  font-weight: 600;
-  color: #000000c0;
-}
 .continue-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Ocupa toda a largura disponível */
+  width: 100%; 
  
 }
 
 .continue-button input {
-  padding: 1rem 2rem;
+  padding: 10px;
   border: none;
   background-color: #28a745;
+  margin-top: 10px;
   cursor: pointer;
-  font-weight: 600;
   color: #fff;
   font-size: 1.2rem;
   text-align: center;
   transition: background-color 0.3s ease;
-  width: 70%;
+  width: 40%;
 }
 
 .continue-button button:hover {
   background-color: #218838;
 }
 
-.continue-button button a {
+.continue-button button{
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 20;
   color: #fff;
 }
 
