@@ -11,7 +11,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -23,35 +22,35 @@
 }
 
 .modal {
-  display: flex; /* Define layout flex para expansão horizontal */
-  flex-wrap: nowrap; /* Impede quebra de linha */
+  display: flex; 
+  flex-wrap: nowrap; 
   background: white;
-  color: black; /* Texto visível no fundo branco */
-  width: auto; /* Largura ajustada ao conteúdo */
-  max-width: 90%; /* Limita a largura máxima a 90% da tela */
+  color: black; 
+  width: auto; 
+  max-width: 90%; 
   padding: 50px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  position: relative; /* Necessário para posicionar o botão de fechar */
+  position: relative; 
 }
 
 .modal h1 {
-  font-size: 32px; /* Ajuste do tamanho da fonte */
-  font-weight: bold; /* Negrito */
-  color: black; /* Cor do texto */
-  text-transform: capitalize; /* Primeira letra maiúscula */
-  text-align: left; /* Alinhamento à esquerda */
-  margin-bottom: 40px; /* Espaço abaixo do título */
+  font-size: 32px; 
+  font-weight: bold; 
+  color: black; 
+  text-transform: capitalize; 
+  text-align: left; 
+  margin-bottom: 40px; 
   margin-right: 120px;
 }
 
 .modal h1::after {
   content: "";
   display: block;
-  width: 50%; /* Tamanho da linha */
-  height: 4px; /* Espessura da linha */
-  background-color: #56c8d2; /* Cor da linha */
-  margin-top: 10px; /* Espaço entre o texto e a linha */
+  width: 50%; 
+  height: 4px; 
+  background-color: #3E8C3A;
+  margin-top: 10px; 
 }
 
 .modal p {
@@ -62,36 +61,31 @@
 
 .button-fechar {
   position: absolute;
-  top: 15px; /* Distância do topo */
-  right: 10px; /* Distância da lateral direita */
-  padding: 5px 10px; /* Espaçamento interno */
-  border: 2px solid black; /* Borda */
-  border-radius: 100%; /* Formato redondo */
-  background: none; /* Remove o fundo */
-  color: black; /* Cor do texto */
+  top: 15px; 
+  right: 10px; 
+  padding: 5px 10px; 
+  border: 2px solid black; 
+  border-radius: 100%; 
+  background: none;
+  color: black; 
   cursor: pointer;
-  transition: all 0.3s ease; /* Suaviza animação */
-}
-
-.button-fechar:hover {
-  color: #4a90e2; /* Cor do texto ao passar o mouse */
-  border-color: #4a90e2; /* Cor da borda ao passar o mouse */
+  transition: all 0.3s ease; 
 }
 
 .quadro-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dois quadros por linha */
-  gap: 20px; /* Espaço entre os quadros */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
   margin-top: 20px;
 }
 
 .quadro {
-  background-color: #1d4d4f; /* Cor de fundo */
+  background: linear-gradient(135deg, rgba(47, 196, 57, 0.8), rgba(59, 100, 60, 0.8));
   padding: 40px;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-  overflow-wrap: break-word; /* Quebra palavras longas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  overflow-wrap: break-word; 
 }
 
 .quadro h3 {
@@ -106,21 +100,27 @@
   margin: 5px 0;
 }
 .buttonEstilo {
-  position: absolute; /* Posiciona o botão de forma absoluta em relação ao contêiner pai */
+  position: absolute; 
   margin-top: 30%;
-  height: 0; /* Alinha o botão à direita, se necessário */
-  /* Outros estilos do botão */
+  height: 0;
 }
 .buttonFechar {
-  font-size: 20px;
+  font-size: 18px;
   width: 70px;
-  font-weight: lighter;
-  margin-top: 10px; /* Espaço abaixo do título */
-  padding: 3px 15px; /* Espaçamento interno para o botão */
-  border: 1px solid green;
-  border-radius: 9px; /* Bordas arredondadas */
-  background: none; /* Remove fundo padrão */
-  color: green; /* Cor do texto */
+  margin-top: 10px; 
+  padding: 3px 15px; 
+  border: 1px solid #3E8C3A;
+  border-radius: 9px; 
+  background: none; 
+  color: #3E8C3A; 
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.buttonFechar i {
+  font-size: 13px;
+}
+.icon-link{
+  color:white;
+  text-decoration: none;
+  margin-left: 10px;
 }
