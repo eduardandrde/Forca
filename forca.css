@@ -23,30 +23,35 @@
 }
 
 .modal {
-  background: linear-gradient(135deg, #4a90e2, #56c8d2); /* Gradiente de fundo */
-  color: white;
-  width: 500px;
-  max-width: 90%;
-  padding: 20px 30px;
-  border-radius: 10px;
+  display: flex; /* Define layout flex para expansão horizontal */
+  flex-wrap: nowrap; /* Impede quebra de linha */
+  background: white;
+  color: black; /* Texto visível no fundo branco */
+  width: auto; /* Largura ajustada ao conteúdo */
+  max-width: 90%; /* Limita a largura máxima a 90% da tela */
+  padding: 50px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative; /* Necessário para posicionar o botão de fechar */
 }
 
 .modal h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-weight: bold;
+  font-size: 32px; /* Ajuste do tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  color: black; /* Cor do texto */
+  text-transform: capitalize; /* Primeira letra maiúscula */
+  text-align: left; /* Alinhamento à esquerda */
+  margin-bottom: 40px; /* Espaço abaixo do título */
+  margin-right: 120px;
 }
 
 .modal h1::after {
   content: "";
   display: block;
-  width: 50%;
-  height: 3px;
-  background: white;
-  margin: 10px auto 0; /* Linha abaixo do título */
+  width: 50%; /* Tamanho da linha */
+  height: 4px; /* Espessura da linha */
+  background-color: #56c8d2; /* Cor da linha */
+  margin-top: 10px; /* Espaço entre o texto e a linha */
 }
 
 .modal p {
@@ -59,13 +64,13 @@
   position: absolute;
   top: 15px; /* Distância do topo */
   right: 10px; /* Distância da lateral direita */
-  padding: 5px 10px; /* Espaçamento ao redor do texto */
-  border: 2px solid white; /* Borda para o círculo */
-  border-radius: 100%; /* Deixa o botão redondo */
-  background: none; /* Remove a cor de fundo */
-  color: white; /* Cor do texto */
+  padding: 5px 10px; /* Espaçamento interno */
+  border: 2px solid black; /* Borda */
+  border-radius: 100%; /* Formato redondo */
+  background: none; /* Remove o fundo */
+  color: black; /* Cor do texto */
   cursor: pointer;
-  transition: all 0.3s ease; /* Suaviza a animação ao passar o mouse */
+  transition: all 0.3s ease; /* Suaviza animação */
 }
 
 .button-fechar:hover {
@@ -73,4 +78,49 @@
   border-color: #4a90e2; /* Cor da borda ao passar o mouse */
 }
 
+.quadro-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dois quadros por linha */
+  gap: 20px; /* Espaço entre os quadros */
+  margin-top: 20px;
+}
 
+.quadro {
+  background-color: #1d4d4f; /* Cor de fundo */
+  padding: 40px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  overflow-wrap: break-word; /* Quebra palavras longas */
+}
+
+.quadro h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.quadro p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 5px 0;
+}
+.buttonEstilo {
+  position: absolute; /* Posiciona o botão de forma absoluta em relação ao contêiner pai */
+  margin-top: 30%;
+  height: 0; /* Alinha o botão à direita, se necessário */
+  /* Outros estilos do botão */
+}
+.buttonFechar {
+  font-size: 20px;
+  width: 70px;
+  font-weight: lighter;
+  margin-top: 10px; /* Espaço abaixo do título */
+  padding: 3px 15px; /* Espaçamento interno para o botão */
+  border: 1px solid green;
+  border-radius: 9px; /* Bordas arredondadas */
+  background: none; /* Remove fundo padrão */
+  color: green; /* Cor do texto */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
