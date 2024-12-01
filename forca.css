@@ -1,126 +1,89 @@
-* {
-  box-sizing: border-box;
-}
 
-.modal-container {
+
+
+/*Menu acessibilidade*/
+.menu-acessibilidade {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
   display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+}
+.botao-acessibilidade {
+  background-color: #8EA7B8;
+  color: white;
+  border: none;
+  display: inline-block;
+  max-width: fit-content;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.painel-acessibilidade {
+  display: none;
+  background-color: #3D7691;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 250px; /
+}
+.painel-acessibilidade button {
+  margin: 5px 0;
+  padding: 20px;
+  border: none;
+  background-color: pink;
+  cursor: pointer;
+  width: 100%; 
+  height: 40%;
+  text-align: center;
+}
+.painel-acessibilidade button:hover {
+  background-color: #8EA7B8;
+}
+.painel-acessibilidade input {
+  margin-top: 10px;
+}
+.painel-acessibilidade label {
+  display: block;
+  margin-top: 10px;
+}
+.opcoes button {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.modal-container.aparecer {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.modal {
-  display: flex; 
-  flex-wrap: nowrap; 
-  background: white;
-  color: black; 
-  width: auto; 
-  max-width: 90%; 
-  padding: 50px 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  position: relative; 
-}
-
-.modal h1 {
-  font-size: 32px; 
-  font-weight: bold; 
-  color: black; 
-  text-transform: capitalize; 
-  text-align: left; 
-  margin-bottom: 40px; 
-  margin-right: 120px;
-}
-
-.modal h1::after {
-  content: "";
-  display: block;
-  width: 50%; 
-  height: 4px; 
-  background-color: #3E8C3A;
-  margin-top: 10px; 
-}
-
-.modal p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.button-fechar {
-  position: absolute;
-  top: 15px; 
-  right: 10px; 
-  padding: 5px 10px; 
-  border: 2px solid black; 
-  border-radius: 100%; 
-  background: none;
-  color: black; 
-  cursor: pointer;
-  transition: all 0.3s ease; 
-}
-
-.quadro-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.quadro {
-  background: linear-gradient(135deg, rgba(47, 196, 57, 0.8), rgba(59, 100, 60, 0.8));
-  padding: 40px;
-  text-align: center;
+  background-color: #8EA7B8;
   color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-  overflow-wrap: break-word; 
-}
-
-.quadro h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.quadro p {
-  font-size: 14px;
-  line-height: 1.4;
-  margin: 5px 0;
-}
-.buttonEstilo {
-  position: absolute; 
-  margin-top: 30%;
-  height: 0;
-}
-.buttonFechar {
-  font-size: 18px;
-  width: 70px;
-  margin-top: 10px; 
-  padding: 3px 15px; 
-  border: 1px solid #3E8C3A;
-  border-radius: 9px; 
-  background: none; 
-  color: #3E8C3A; 
+  border: none;
+  padding: 10px 20px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
 }
-.buttonFechar i {
-  font-size: 13px;
+
+.opcoes button i {
+  margin: 8px;
+  background-color: #043265;
+  padding: 13px;
+  border-radius: 3px;
 }
-.icon-link{
-  color:white;
-  text-decoration: none;
-  margin-left: 10px;
+.opcoes button{
+  margin-bottom: 9px;
+}
+.icone-h1{
+  background-color: #043265;
+  padding: 13px;
+  border-radius: 3px;
+  font-weight: bolder;
+  margin: 8px;
+}
+.opcoes button:hover {
+  background-color: #043265;
 }

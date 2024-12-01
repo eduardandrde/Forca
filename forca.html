@@ -10,65 +10,18 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="abrirModal">abrir</button>
-    <div class="modal-container" id="modalContainer">
-        <div class="modal">
-            <h1>Equipe de <br>desenvolvimento</br></h1>
-            <div class="buttonEstilo">
-                <button class="buttonFechar" id="buttonFechar"><i class="fas fa-arrow-right"></i></button>
-            </div>
-            <div class="quadro-container">
-                <div class="quadro">
-                    <h3>Eduarda Andrade</h3>
-                    <p>Consultora Sênior de Estratégia</p>
-                    <div class="links">
-                        <a href="https://github.com/username" target="_blank" class="icon-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="mailto:email@example.com" class="icon-link">
-                            <i class="fas fa-envelope"></i> E-mail
-                        </a>
-                    </div>
-                </div>
-                <div class="quadro">
-                    <h3>Giovanna Moura</h3>
-                    <p>Gerente de Consultoria Financeira</p>
-                    <div class="links">
-                        <a href="https://github.com/username" target="_blank" class="icon-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="mailto:email@example.com" class="icon-link">
-                            <i class="fas fa-envelope"></i> E-mail
-                        </a>
-                    </div>
-                </div>
-                <div class="quadro">
-                    <h3>Jackson Freitas</h3>
-                    <p>Analista de Operações</p>
-                    <div class="links">
-                        <a href="https://github.com/username" target="_blank" class="icon-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="mailto:email@example.com" class="icon-link">
-                            <i class="fas fa-envelope"></i> E-mail
-                        </a>
-                    </div>
-                </div>
-                <div class="quadro">
-                    <h3>Jackson Freitas</h3>
-                    <p>Diretor de Desenvolvimento de Negócios</p>
-                    <div class="links">
-                        <a href="https://github.com/username" target="_blank" class="icon-link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="mailto:email@example.com" class="icon-link">
-                            <i class="fas fa-envelope"></i> E-mail
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <button class="botao-acessibilidade"><p>+ Acessibilidade</p></button>
+        
+    <div class="painel-acessibilidade">
+      <div class="opcoes">
+        <button onclick="destacarLinks()"><div class="icone-h1">http://</div>Links (Destaque)</button>
+        <button onclick="destacarTitulos()"><div class="icone-h1">H1</div> Títulos (Destaque)</button>
+        <button onclick="DislexiaFont()"><i class="fas fa-font"></i>Dislexia</button>
+        <button class="contrastebutton" id="contrastebutton"><i class="far fa-sun"></i>Contraste</button>
+        <button id="zoom-text"><i class="fas fa-search-plus"></i>Ampliar Texto</button>
+      </div>
     </div>
+</div>
 </body>
 <script src="java.js"></script>
 </html>
